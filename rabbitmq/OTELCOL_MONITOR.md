@@ -7,10 +7,10 @@ configuration instructions below.
 
 ## Description
 
-**The Splunk OpenTelemetry Collector collects performance metrics from a RabbitMQ server via an
+The Splunk OpenTelemetry Collector collects performance metrics from a RabbitMQ server via an
 authenticated network connection to the [Management HTTP API](https://www.rabbitmq.com/management.html).
 Metrics are grouped by Channels, Connections, Exchanges, Nodes and Queues. Works for RabbitMQ 3.0
-and later.**
+and later.
 
 **Note that you must individually enable each of the five `collect*`
 options to get metrics pertaining to those facets of a RabbitMQ instance.
@@ -18,7 +18,7 @@ If none of them are enabled, no metrics will be sent.**
 
 ### Implementation Origin
 
-This implementation directly executes the [SignalFx Smart Agent collectd/rabbitmq monitor](https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/collectd-rabbitmq.md) to gather metrics.
+This implementation invokes the monitor code from the [SignalFx Smart Agent collectd/rabbitmq monitor](https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/collectd-rabbitmq.md) to gather metrics.
 
 ## Configuration
 
