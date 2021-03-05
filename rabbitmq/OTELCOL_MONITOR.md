@@ -2,7 +2,7 @@
 ### INSTALLATION
 
 This integration is part of the [Splunk OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector)[](sfx_link:signalfx-agent)
-as the `rabbitmq` monitor. This particular integration is invoked using the the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). You should first deploy the Splunk OpenTelemetry Collector and configure the SignalFx Smart Agent Receiver using [These Instructions](https://need.to.write/instructions) to the same host as the service you want to monitor, and then continue with the
+as the `smartagent/rabbitmq` receiver. This particular integration is invoked using the the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). You should first deploy the Splunk OpenTelemetry Collector and configure the SignalFx Smart Agent Receiver using [These Instructions](https://need.to.write/instructions) to the same host as the service you want to monitor, and then continue with the
 configuration instructions below.
 
 ## Description
@@ -30,7 +30,7 @@ exporters:  # The signalfx exporter is used to send metrics to the Splunk Observ
   signalfx:
 
 receivers:
-  smartagent/collectd:
+  smartagent/rabbitmq:
     type: collectd/rabbitmq
     host: myrabbitmqserver
     port: 1234
